@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="caculator.css">
+    <style>
+        #ct{
+            width: 500px;
+            height: 500px;
+            border: solid 3px;
+        }
+    </style>
+</head>
+<body>
+<table id="ct">
+    <tr style="text-align: right;">
+        <th colspan="4" style="border: solid 2px" id="result"></th>
+    </tr>
+    <tr>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(1)">1</button> </th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(2)">2</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(3)">3</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number('+')">+</button></th>
+    </tr>
+    <tr>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(4)">4</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(5)">5</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(6)">6</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number('-')">-</button></th>
+    </tr>
+    <tr>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(7)">7</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(8)">8</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(9)">9</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number('*')">*</button></th>
+    </tr>
+    <tr>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="reset()">C</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number(0)">0</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="ketqua()">=</button></th>
+        <th><button style="height: 80px; width: 80px" type="button" name="7" value="7" onclick="number('/')">/</button></th>
+    </tr>
+</table>
+
+<script>
+    function number(value) {
+        document.getElementById('result').innerHTML += value
+    }
+    function ketqua(value) {
+        document.getElementById('result').innerHTML = eval(document.getElementById('result').innerHTML)
+    }
+    function reset(value) {
+        document.getElementById('result').innerHTML = '';
+    }
+</script>
+</body>
+</html>
